@@ -1,7 +1,7 @@
 
 # Assignment 3:
 
-#Corners Detection using Harris operator:
+##Corners Detection using Harris operator:
 
 Harris Corner Detector is a corner detection operator that is commonly used in computer vision algorithms to extract corners and infer features of an image
 
@@ -9,14 +9,14 @@ Harris Corner Detector is a corner detection operator that is commonly used in c
 
 ### 1- Color to grayscale
 ### 2- Spatial derivative calculation: 
-   calculation of ![](.\images\ix.png) of the image using Sobrl Kernel ![](.\images\sobel.png)
+   calculation of ![](ix.png) of the image using Sobrl Kernel ![](sobel.png)
                
 ### 3- construct the Hessian matrix M over a window 1x1 so we are able to compute the principal vectors of variation.
    usage of box filter for the window and then construct the Hessian matrix M ![](m.png)
 
 ### 4- Harris response calculation 
                evaluate corners using R as a measure where 
-   ![](.\images\r.png)
+   ![](r.png)
 
 ### 5- Select large values of R using relative to quantile value
                corners = np.abs(R) > np.quantile(np.abs(R),0.9)
@@ -25,10 +25,10 @@ Harris Corner Detector is a corner detection operator that is commonly used in c
 ## Results:
   
 ### Input image 
-  ![](.\images\dot.jpg)
+  ![](dot.jpg)
                 
 ### Output image 
-  ![](.\images\corner.png)                
+  ![](corenerss.png)                
                
 
 # Region (seed) Growing Segmentation:
@@ -45,10 +45,10 @@ Harris Corner Detector is a corner detection operator that is commonly used in c
 ## Results:
   
 ### Input image 
-  ![](.\images\regioninp.jpeg)
+  ![](regioninp.jpeg)
                 
 ### Output image 
-  ![](.\images\regionout.jpg)
+  ![](regionout.jpg)
 
 
 
@@ -57,12 +57,12 @@ Harris Corner Detector is a corner detection operator that is commonly used in c
 
 Input image :
 
-![](.\images\mandrill200x200.jpg)
+![](mandrill200x200.jpg)
 
 to get clusters from this image 
 First, we create the feature space by getting the red and the green value of each RGB pixel. It is 2d space as in this figure:
 
-![](.\images\featureSpace.PNG)
+![](featureSpace.PNG)
 
 We generate random values of means then we cluster feature values according to the distances between them and the last means. we calculate the new mean for each cluster and redo the previous step to update these means ( X's are the mean values in the previous figure).
 So, the user needs to determine the number of clusters and the number of iterations 
@@ -71,7 +71,7 @@ Finally, we cluster the pixels of the input image according to the final mean va
 
 output Image :  
 
-![](.\images\outputimage.PNG)
+![](outputimage.PNG)
 
 
 #Mean Shift Segmentation
@@ -89,11 +89,11 @@ if the value below the threshold
 with threshold = 90 and 200*200 image
 - input image
 
-![](.\images\try.jpg "Input Image")
+![](try.jpg "Input Image")
 
 - Output image
 
-![](.\images\Filtered_Image.png "Segmented Image")
+![](Filtered_Image.png "Segmented Image")
 
 ###References
 [Github](https://github.com/agamdeep/Mean-Shift-Segmentation-using-Python)
