@@ -1,7 +1,8 @@
 
 # Assignment 3:
 
-##Corners Detection using Harris operator:
+
+# Corners Detection using Harris operator:
 
 Harris Corner Detector is a corner detection operator that is commonly used in computer vision algorithms to extract corners and infer features of an image
 
